@@ -257,11 +257,6 @@ var miodektut = ["Kliknij P aby strzelać telepatycznym miodkiem"];
       newdialogbubble(skeletontext, 2);
     }
     openbars++;
-    console.log(openbars);
-    console.log(normalskeletonhp + "normal");
-    console.log(xskeletonhp + "x");
-    console.log(yskeletonhp + "y");
-    console.log(bigskeletonhp + "big");
     if(openbars>3){
       skelpassed=true;
       ironbars.destroy();
@@ -326,7 +321,6 @@ var miodektut = ["Kliknij P aby strzelać telepatycznym miodkiem"];
   function healthregen(){
       ccounter++;
       if(ccounter > healthregentimeout && swordjakubpuchatekhp <99){
-        console.log("leczy");
         healthloss(-2);
       }
       if(ccounter>healthregentimeout){
@@ -879,8 +873,6 @@ var miodektut = ["Kliknij P aby strzelać telepatycznym miodkiem"];
 
     Crafty.bind("KeyDown", function(e){
       if(e.key == Crafty.keys.O){
-        console.log(bombpickedup);
-        console.log(thebombhasbeenplanted);
         
         if(bombpickedup==true && thebombhasbeenplanted==false){
         thebombhasbeenplanted=true;
