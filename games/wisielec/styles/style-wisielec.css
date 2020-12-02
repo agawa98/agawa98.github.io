@@ -1,0 +1,12 @@
+#hint:hover{
+    color: white;
+}
+#hint{
+    color: black;
+    background-color: black;
+}
+#calyhint{
+    position: relative;
+    
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(89, 0, 116);
+}
+#pole{
+    background-image: url("../img/garden.png")
+}
+#canv{
+    float:left;
+    position: fixed;
+    top: 10%;
+    left: 32%;
+}
+#panel{
+    float:left;
+    width:30%;
+    background-color: rgb(0, 0, 117);
+    text-align: center;
+    color:white;
+    position:fixed;
+    top: 10%;
+}
+h1{
+    font-size: 35px;
+}
+p{
+    font-size: 20px;
+}

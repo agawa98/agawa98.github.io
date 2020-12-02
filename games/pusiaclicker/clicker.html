@@ -1,0 +1,370 @@
+
+    <!--mocno zainspirowane cookie clickerem-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles/clicker-styles.css" type="text/css">
+
+</head>
+<body>
+
+
+
+        <script>
+                var mainearn=0;
+                var movies=0;
+                var zarobek=0;
+                var makaocost=20;
+                var makaoowned=0;
+                var makaoearn=0;
+                var szachycost=150;
+                var szachyowned=0;
+                var szachyearn=0;
+                var rowercost=500;
+                var rowerowned=0;
+                var rowerearn=0;
+                var rzutkicost=4000;
+                var rzutkiowned=0;
+                var rzutkiearn=0;
+                var studiowozcost=30000;
+                var studiowozowned=0;
+                var studiowozearn=0;
+                var krolgorcost=250000;
+                var krolgorowned=0;
+                var krolgorearn=0;
+                var bagnocost=2137420;
+                var bagnoowned=0;
+                var bagnoearn=0;
+
+
+
+                var intervalID = window.setInterval(updatemeters, 1000);
+            function updatemeters(){
+                document.getElementById("persec").innerHTML = (mainearn + " filmów na sekundę");
+                document.getElementById("makaocostfield").innerHTML = (makaocost);
+                document.getElementById("makaoownedfield").innerHTML = (makaoowned);
+                document.getElementById("szachycostfield").innerHTML = (szachycost);
+                document.getElementById("szachyownedfield").innerHTML = (szachyowned);
+                document.getElementById("rowercostfield").innerHTML = (rowercost);
+                document.getElementById("rowerownedfield").innerHTML = (rowerowned);
+                document.getElementById("rzutkicostfield").innerHTML = (rzutkicost);
+                document.getElementById("rzutkiownedfield").innerHTML = (rzutkiowned);
+                document.getElementById("studiowozcostfield").innerHTML = (studiowozcost);
+                document.getElementById("studiowozownedfield").innerHTML = (studiowozowned);
+                document.getElementById("krolgorcostfield").innerHTML = (krolgorcost);
+                document.getElementById("krolgorownedfield").innerHTML = (krolgorowned);
+                document.getElementById("bagnocostfield").innerHTML = (bagnocost);
+                document.getElementById("bagnoownedfield").innerHTML = (bagnoowned);
+                document.getElementById("filmy").innerHTML = (movies + " filmów");
+            }
+            
+            function klik(){
+                movies++;
+                updatemeters();
+                var sound = ["media/audio/catsounds/purr.ogg","media/audio/catsounds/growl.ogg","media/audio/catsounds/growl1.ogg","media/audio/catsounds/meow1.ogg","media/audio/catsounds/meow2.ogg","media/audio/catsounds/meow3.ogg","media/audio/catsounds/meow4.ogg"];
+                var audio = new Audio(sound[Math.floor(Math.random() * 7)]);
+                audio.play();
+            }
+
+
+            function makaobuy(){
+                if(movies<makaocost){
+                    document.getElementById("makao").setAttribute("disabled");
+                }
+            
+                movies=movies-makaocost;
+                makaocost=20*(((Math.round((Math.pow(1.07, makaoowned+1)*100))))/100);
+                makaocost=parseFloat(makaocost.toFixed(2));
+                makaoearn=makaoearn+0.5;
+                makaoowned++;
+                updatemeters();
+            } 
+            function makaobuy10(){
+                for(let i=10; i>0; i--){
+                    makaobuy();
+                }
+            }
+            function makaobuy100(){
+                for(let i=100; i>0; i--){
+                    makaobuy();
+                }
+            }
+            var intervalID = window.setInterval(makaoearnadd, 1000);
+            function makaoearnadd() {
+                movies=parseFloat((movies+makaoearn).toFixed(2));
+                updatemeters();
+            }
+
+
+            function szachybuy(){
+                if(movies<szachycost){
+                    document.getElementById("szachy").setAttribute("disabled");
+                }
+            
+                movies=movies-szachycost;
+                szachycost=150*(((Math.round((Math.pow(1.08, szachyowned+1)*100))))/100);
+                szachycost=parseFloat(szachycost.toFixed(2));
+                szachyearn=szachyearn+2;
+                szachyowned++;
+                updatemeters();
+            }
+            function szachybuy10(){
+                for(let i=10; i>0; i--){
+                    szachybuy();
+                }
+            }
+            function szachybuy100(){
+                for(let i=100; i>0; i--){
+                    szachybuy();
+                }
+            }
+            var intervalID = window.setInterval(szachyearnadd, 1000);
+            function szachyearnadd() {
+                movies=parseFloat((movies+szachyearn).toFixed(2));
+                updatemeters();
+            }
+
+
+            function rowerbuy(){
+                if(movies<rowercost){
+                    document.getElementById("rower").setAttribute("disabled");
+                }
+            
+                movies=movies-rowercost;
+                rowercost=500*(((Math.round((Math.pow(1.1, rowerowned+1)*100))))/100);
+                rowercost=parseFloat(rowercost.toFixed(2));
+                rowerearn=rowerearn+8;
+                rowerowned++;
+                updatemeters();
+            }
+            function rowerbuy10(){
+                for(let i=10; i>0; i--){
+                    rowerbuy();
+                }
+            }
+            function rowerbuy100(){
+                for(let i=100; i>0; i--){
+                    rowerbuy();
+                }
+            }
+            var intervalID = window.setInterval(rowerearnadd, 1000);
+            function rowerearnadd() {
+                movies=parseFloat((movies+rowerearn).toFixed(2));
+                updatemeters();
+            }
+
+            function rzutkibuy(){
+                if(movies<rzutkicost){
+                    document.getElementById("rzutki").setAttribute("disabled");
+                }
+            
+                movies=movies-rzutkicost;
+                rzutkicost=4000*(((Math.round((Math.pow(1.11, rzutkiowned+1)*100))))/100);
+                rzutkicost=parseFloat(rzutkicost.toFixed(2));
+                rzutkiearn=rzutkiearn+20;
+                rzutkiowned++;
+                updatemeters();
+            }
+            function rzutkibuy10(){
+                for(let i=10; i>0; i--){
+                    rzutkibuy();
+                }
+            }
+            function rzutkibuy100(){
+                for(let i=100; i>0; i--){
+                    rzutkibuy();
+                }
+            }
+            var intervalID = window.setInterval(rzutkiearnadd, 1000);
+            function rzutkiearnadd() {
+                movies=parseFloat((movies+rzutkiearn).toFixed(2));
+                updatemeters();
+            }
+
+            function studiowozbuy(){
+                if(movies<studiowozcost){
+                    document.getElementById("studiowoz").setAttribute("disabled");
+                }
+            
+                movies=movies-studiowozcost;
+                studiowozcost=30000*(((Math.round((Math.pow(1.12, studiowozowned+1)*100))))/100);
+                studiowozcost=parseFloat(studiowozcost.toFixed(2));
+                studiowozearn=studiowozearn+60;
+                studiowozowned++;
+                updatemeters();
+            }
+            function studiowozbuy10(){
+                for(let i=10; i>0; i--){
+                    studiowozbuy();
+                }
+            }
+            function studiowozbuy100(){
+                for(let i=100; i>0; i--){
+                    studiowozbuy();
+                }
+            }
+            var intervalID = window.setInterval(studiowozearnadd, 1000);
+            function studiowozearnadd() {
+                movies=parseFloat((movies+studiowozearn).toFixed(2));
+                updatemeters();
+            }
+
+            function krolgorbuy(){
+                if(movies<krolgorcost){
+                    document.getElementById("krolgor").setAttribute("disabled");
+                }
+            
+                movies=movies-krolgorcost;
+                krolgorcost=250000*(((Math.round((Math.pow(1.11, krolgorowned+1)*100))))/100);
+                krolgorcost=parseFloat(krolgorcost.toFixed(2));
+                krolgorearn=krolgorearn+150;
+                krolgorowned++;
+                updatemeters();
+            }
+            function krolgorbuy10(){
+                for(let i=10; i>0; i--){
+                    krolgorbuy();
+                }
+            }
+            function krolgorbuy100(){
+                for(let i=100; i>0; i--){
+                    krolgorbuy();
+                }
+            }
+            var intervalID = window.setInterval(krolgorearnadd, 1000);
+            function krolgorearnadd() {
+                movies=parseFloat((movies+krolgorearn).toFixed(2));
+                updatemeters();
+            }
+
+            function bagnobuy(){
+                if(movies<bagnocost){
+                    document.getElementById("bagno").setAttribute("disabled");
+                }
+            
+                movies=movies-bagnocost;
+                bagnocost=2137420*(((Math.round((Math.pow(1.17, bagnoowned+1)*100))))/100);
+                bagnocost=parseFloat(bagnocost.toFixed(2));
+                bagnoearn=bagnoearn+666;
+                bagnoowned++;
+                updatemeters();
+            }
+            function bagnobuy10(){
+                for(let i=10; i>0; i--){
+                    bagnobuy();
+                }
+            }
+            function bagnobuy100(){
+                for(let i=100; i>0; i--){
+                    bagnobuy();
+                }
+            }
+            var intervalID = window.setInterval(bagnoearnadd, 1000);
+            function bagnoearnadd() {
+                movies=parseFloat((movies+bagnoearn).toFixed(2));
+                updatemeters();
+            }
+
+            var intervalID = window.setInterval(mainearnadd, 1);
+            function mainearnadd() {
+                mainearn=makaoearn+szachyearn+rowerearn+rzutkiearn+studiowozearn+krolgorearn+bagnoearn;
+                document.getElementById("persec").innerHTML = (mainearn + " filmów na sekundę");
+                updatemeters();
+            }
+            
+            function god50(){
+                movies=movies+500000;
+                updatemeters();
+            }
+
+                </script>
+<div id="clickarea">
+    <h1 id="title">pusiaclicker BETAAAAaaaaa</h1>
+    <img draggable="false" onclick="klik()" id="click" src="media/img/pusia.jpg">
+    <div id="panel">
+        <p id="filmy">0 filmów</p>
+        <p id="persec">0 filmów na sekundę</p>
+        <button onclick="god50()" id="god50">dodaj 5000 filmów</button>
+    </div>
+</div>
+
+<div id="buymenu">
+    <h1 id="shoptitle">Sklep</h1>
+    <div id="shopthings">
+
+
+            <table >
+                        <tr>
+                            <td>Produkt</td>
+                            <td>Masz:</td>
+                            <td>Koszt</td>
+                            <td>x1</td>
+                            <td>x10</td>
+                            <td>x100</td>
+                        </tr>
+                        <tr>
+                            <td>Makao</td>
+                            <td id="makaoownedfield">0</td>
+                            <td id="makaocostfield">20</td>
+                            <td onclick="makaobuy()">Kup</td>
+                            <td onclick="makaobuy10()">Kup</td>
+                            <td onclick="makaobuy100()">Kup</td>
+                        </tr>
+                        <tr>
+                            <td>Szachy</td>
+                            <td id="szachyownedfield">0</td>
+                            <td id="szachycostfield">150</td>
+                            <td onclick="szachybuy()">Kup</td>
+                            <td onclick="szachybuy10()">Kup</td>
+                            <td onclick="szachybuy100()">Kup</td>
+                        </tr>
+                        <tr>
+                            <td>Rower</td>
+                            <td id="rowerownedfield">0</td>
+                            <td id="rowercostfield">500</td>
+                            <td onclick="rowerbuy()">Kup</td>
+                            <td onclick="rowerbuy10()">Kup</td>
+                            <td onclick="rowerbuy100()">Kup</td>
+                        </tr>
+                        <tr>
+                            <td>Rzutki</td>
+                            <td id="rzutkiownedfield">0</td>
+                            <td id="rzutkicostfield">4000</td>
+                            <td onclick="rzutkibuy()">Kup</td>
+                            <td onclick="rzutkibuy10()">Kup</td>
+                            <td onclick="rzutkibuy100()">Kup</td>
+                        </tr>
+                        <tr>
+                            <td>Studiowóz</td>
+                            <td id="studiowozownedfield">0</td>
+                            <td id="studiowozcostfield">30000</td>
+                            <td onclick="studiowozbuy()">Kup</td>
+                            <td onclick="studiowozbuy10()">Kup</td>
+                            <td onclick="studiowozbuy100()">Kup</td>
+                        </tr>
+                        <tr>
+                            <td>Król Gór</td>
+                            <td id="krolgorownedfield">0</td>
+                            <td id="krolgorcostfield">20</td>
+                            <td onclick="krolgorbuy()">Kup</td>
+                            <td onclick="krolgorbuy10()">Kup</td>
+                            <td onclick="krolgorbuy100()">Kup</td>
+                        </tr>
+                        <tr>
+                            <td>Bagno</td>
+                            <td id="bagnoownedfield">0</td>
+                            <td id="bagnocostfield">20</td>
+                            <td onclick="bagnobuy()">Kup</td>
+                            <td onclick="bagnobuy10()">Kup</td>
+                            <td onclick="bagnobuy100()">Kup</td>
+                        </tr>
+                </table>
+
+    </div>
+</div>
+    
+
+</body>
+</html>
