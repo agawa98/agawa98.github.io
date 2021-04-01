@@ -1,6 +1,7 @@
 
 var dataegzaminu = new Date("June 30, 2021 08:00:00").getTime();
 var egzdate = new Date("June 30, 2021 08:00:00")
+var trzymsc = new Date("March 30, 2021 08:00:00").getTime()
 var miesslowo = "asd"
 var tygslowo = "asd"
 var dzienslowo = "asd"
@@ -11,10 +12,10 @@ var msslowo = "asd"
 
 
 
+
 function main(){
 
     var teraz = new Date().getTime()
-    var terazdate = new Date()
 
    
 
@@ -92,7 +93,7 @@ function main(){
 
 
 
-    document.getElementById("mies").innerHTML = ((ms/2628002880).toPrecision(3) + miesslowo);
+    document.getElementById("mies").innerHTML = ("~" + (ms/2628002880).toPrecision(3) + miesslowo);
 
     document.getElementById("tyg").innerHTML = ((ms/604800000).toPrecision(4) + tygslowo);
 
@@ -106,7 +107,6 @@ function main(){
 
     document.getElementById("ms").innerHTML = (ms + msslowo);
 
-    
 
     setTimeout(main, 1)
 }
