@@ -256,5 +256,8 @@ a{
     .musicpagebg{
         background-image: url("../media/img/pagetemps/music.jpg");
     }
+    .egzaminbg{
+        background-image: url("../media/img/pagetemps/egzaminbg.jpg");
+    }
 }
 
