@@ -259,5 +259,8 @@ a{
     .egzaminbg{
         background-image: url("../media/img/pagetemps/egzaminbg.jpg");
     }
+    .maturabg{
+        background-image: url("../media/img/pagetemps/maturabg.png");
+    }
 }
 
