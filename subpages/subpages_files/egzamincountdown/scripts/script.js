@@ -1,7 +1,3 @@
-
-var dataegzaminu = new Date("June 30, 2021 08:00:00").getTime();
-var egzdate = new Date("June 30, 2021 08:00:00")
-var trzymsc = new Date("March 30, 2021 08:00:00").getTime()
 var miesslowo = "asd"
 var tygslowo = "asd"
 var dzienslowo = "asd"
@@ -9,11 +5,23 @@ var godzslowo = "asd"
 var minslowo = "asd"
 var sekslowo = "asd"
 var msslowo = "asd"
+var bg = ["media/img/backgroundzawodowe.png","media/img/backgroundmatura.png"]
 
 
 
 
 function main(){
+
+    if(wybierzdate.value==0){
+        var dataegzaminu = new Date("January 10, 2022 10:00:00").getTime();
+        document.body.style.backgroundImage = "url("+ bg[0] +")"
+    }
+    if(wybierzdate.value==1){
+        var dataegzaminu = new Date("May 4, 2022 9:00:00").getTime();
+        document.body.style.backgroundImage = "url("+ bg[1] +")"
+    }
+
+    
 
     var teraz = new Date().getTime()
 
