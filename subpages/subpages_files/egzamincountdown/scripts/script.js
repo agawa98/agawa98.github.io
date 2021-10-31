@@ -5,7 +5,7 @@ var godzslowo = "asd"
 var minslowo = "asd"
 var sekslowo = "asd"
 var msslowo = "asd"
-var bg = ["media/img/backgroundzawodowe.png","media/img/backgroundmatura.png"]
+var bg = ["media/img/backgroundzawodowe.png","media/img/backgroundmatura.png","media/img/backgroundnnn.png"]
 
 
 
@@ -19,6 +19,10 @@ function main(){
     if(wybierzdate.value==1){
         var dataegzaminu = new Date("May 4, 2022 9:00:00").getTime();
         document.body.style.backgroundImage = "url("+ bg[1] +")"
+    }
+    if(wybierzdate.value==2){
+        var dataegzaminu = new Date("November 30, 2021 23:59:59").getTime();
+        document.body.style.backgroundImage = "url("+ bg[2] +")"
     }
 
     
