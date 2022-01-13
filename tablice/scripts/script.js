@@ -1,6 +1,11 @@
 function openNav(){
     dopasuj()
 }
+
+window.onload = displaywidth();
+function displaywidth(){
+    document.getElementById("tytul").innerHTML += window.innerWidth
+}
   
   /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
 function closeNav() {
