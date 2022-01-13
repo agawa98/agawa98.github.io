@@ -1,4 +1,8 @@
 /* The sidebar menu */
+body{
+  background-color: #b0dfad;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .sidebar {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
@@ -6,7 +10,7 @@
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: #394631; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
@@ -17,14 +21,15 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #C9EDC1;
     display: block;
     transition: 0.3s;
   }
-   
+  
   /* When you mouse over the navigation links, change their color */
   .sidebar a:hover {
     color: #f1f1f1;
+    cursor: pointer;
   }
   
   /* Position and style the close button (top right corner) */
@@ -40,14 +45,15 @@
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
-    color: white;
+    background-color: #394631    ;
+    color: #97CB8B;
     padding: 10px 15px;
     border: none;
+    font-weight: bold;
   }
   
   .openbtn:hover {
-    background-color: #444;
+    color: #f1f1f1;
   }
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -61,9 +67,36 @@
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
-
   #tablicadiv{
+      height: 100%;
+      text-align: center;
+  }
+  #naglowek
+  {
     text-align: center;
-    height:100%;
-    width:100%;
+    background-color: #394631   ;
+    padding: 2px;
+    border-radius: 25px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+    color: #97CB8B;
+    font-size: 16px;
+    
+  }
+  img{
+    border: 5px solid #394631;
+
+  }
+  #spis{
+    background-color: #97CB8B;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 30px;
+    color: #394631;
+    margin-top: -20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15%;
+    padding: 0.5px;
   }

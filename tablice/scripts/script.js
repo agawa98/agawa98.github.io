@@ -5,7 +5,6 @@ function openNav(){
 
 
 window.onload = function(){
-     document.getElementById("tytul").innerHTML += window.innerWidth
      if(window.innerWidth<=1000){
          toggleSidebar()
      }
