@@ -2,10 +2,16 @@ function openNav(){
     dopasuj()
 }
 
-window.onload = displaywidth();
-function displaywidth(){
-    document.getElementById("tytul").innerHTML += window.innerWidth
+
+
+window.onload = function(){
+     document.getElementById("tytul").innerHTML += window.innerWidth
+     if(window.innerWidth<=1000){
+         openNav();
+         SidebarOpen=true;
+     }
 }
+
   
   /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
 function closeNav() {
@@ -37,17 +43,20 @@ function toggleSidebar(){
 function displayimg(clickid){
         console.log(clickid)
         document.getElementById("tablicadiv").innerHTML = '<img src="img/tabele/'+clickid+'.png" id="tablica">';
-
+        if(window.innerWidth<=1000){
+            closeNav();
+            SidebarOpen=false;
+        }
 }
 window.addEventListener('resize', dopasuj);
 function dopasuj(){
-    if(window.innerWidth>700){
+    if(window.innerWidth>1000){
         console.log(innerWidth)
         document.getElementById("mySidebar").style.width = "25%";
         document.getElementById("main").style.marginLeft = "25%";
 
     }
-    if(window.innerWidth<=700){
+    if(window.innerWidth<=1000){
         console.log(innerWidth)
         document.getElementById("mySidebar").style.width = "100%";
         document.getElementById("main").style.marginLeft = "100%";
