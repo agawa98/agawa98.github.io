@@ -44,8 +44,7 @@ function displayimg(clickid){
         console.log(clickid)
         document.getElementById("tablicadiv").innerHTML = '<img src="img/tabele/'+clickid+'.png" id="tablica">';
         if(window.innerWidth<=1000){
-            closeNav();
-            SidebarOpen=false;
+            toggleSidebar()
         }
 }
 window.addEventListener('resize', dopasuj);
