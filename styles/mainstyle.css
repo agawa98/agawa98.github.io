@@ -21,246 +21,199 @@ a{
     background-color: rgba(255, 68, 0, 0.603);
 }
 
-
-
-
-
-
-@media(min-width: 0px) and (max-width: 400px){
-    body{
-        background-image: url(../media/img/background/space-small.png);
-    }
-
-    #urslogosmaller{
-        position: relative;
-        left:0px;
-        top: 0px;
-        width: 100%;
-        margin: 0px;
-    }
-    #urslogo{
-        width: 0px;
-    }
+body{
+    background-image: url(../media/img/background/sfskyline.jpg);
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+}
+li{
+    padding:8px;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(53, 53, 53);
+    font-family: "Courier New";
+    text-align: right;
+    transition: background-color 0.6s, letter-spacing 0.4s;
+}
+li:hover{
+    background-color: rgba(0, 153, 0, 0.521);
+    letter-spacing: 3px;
 }
 
-@media(min-width: 401px) and (max-width: 600px){
-    body{
-        background-image: url(../media/img/background/space-small.png);
-    }
-
-    #urslogosmaller{
-        position: relative;
-        left:10%;
-        top: 0px;
-        width: 80%;
-    }
-    #urslogo{
-        width: 0px;
-    }
+#pagecontent{
+    float: right;
+    width: 80%;
+}
+#pageheader{
+    font: 50px Verdana sans-serif;
+    color: rgb(221, 188, 0);
+    text-shadow: 2px 2px 8px red;
+    width:80%;
+    float:right;
+    text-align: center;
+    margin: 15px;
+}
+#aktkafelek{
+    width:28.32%;
+    min-height: 250px;
+    margin:1.7012%;
+    padding:0.5%;
+    float: left;
+    background-color: rgb(55, 13, 94);
+    border: 3px groove black;
+    font: 25px Verdana sans-serif;
+    color: white;
+    transition: background-color 0.6s;
+}
+#aktkafelek:hover{
+    background-color: brown;
+}
+#grykafelek{
+    width:28.32%;
+    min-height: 250px;
+    margin:1.7012%;
+    padding:0.5%;
+    float: left;
+    background-size: 100% 100%;
+    opacity: 0.8;
+    border: 3px groove black;
+    font: 25px Verdana sans-serif;
+    color: white;
+    transition: opacity 0.6s;
+}
+#grykafelek:hover{
+    opacity: 1;
+}
+#menu{
+    float: left;
+    width: 20%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-image: url("../media/img/background/menubackground.jpg");
+    overflow: hidden;
+    height: 100%;
+    border-right: 3px solid black;
+    font-weight: bold;
+}
+#urslogosmaller{
+    width: 0px;
+}
+#urslogo{
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
-@media(min-width: 601px) and (max-width: 900px){
 
+
+
+.chooseplayer{
+    width: 17.5%;
+    margin: 1%;
+    float: right;
+    height: 80vh;
+    position: relative;
+    top: 10%;
+}
+.dkurek{
+    background-image: url(../media/img/players/error.png);
+    background-size: 100% 100%;
+    opacity: 0;
+    transition: opacity 2s;
+}
+.dkurek:hover{
+    opacity: 1;
+}
+.grzbog{
+    background-image: url(../media/img/players/error.png);
+    background-size: 100% 100%;
+    opacity: 0;
+    transition: opacity 2s;
+}
+.grzbog:hover{
+    opacity: 1;
+}
+.frytka{
+    background-image: url(../media/img/players/error.png);
+    background-size: 100% 100%;
+    opacity: 0;
+    transition: opacity 2s;
+}
+.frytka:hover{
+    opacity: 1;
+}
+.miko{
+    background-image: url(../media/img/players/error.png);
+    background-size: 100% 100%;
+    opacity: 0;
+    transition: opacity 2s;
+}
+.miko:hover{
+    opacity: 1;
+}
+.aber{
+    background-image: url(../media/img/players/error.png);
+    background-size: 100% 100%;
+    opacity: 0;
+    transition: opacity 2s;
+}
+.aber:hover{
+    opacity: 1;
+}
+.playername{
+    position:relative;
+    top: 50%;
+    font-size: 25px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center; 
 }
 
-@media(min-width: 901px) and (max-width: 1200px){
-
+.gamename{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+.pudzianbackground{
+    background-image: url("../media/img/gametemps/pudzian.png");
+}
+.wisielecbackground{
+    background-image: url("../media/img/gametemps/wisielec.png");
+}
+.pusiaclickerbackground{
+    background-image: url("../media/img/gametemps/pusiaclicker.png");
+}
+.ojpbackground{
+    background-image: url("../media/img/gametemps/ojp.png")
+}
+.parispagebg{
+    background-image: url("../media/img/pagetemps/paryz.jpg");
+}
+.wroclawpagebg{
+    background-image: url("../media/img/pagetemps/wroclaw.jpg");
+}
+.alicepagebg{
+    background-image: url("../media/img/pagetemps/alice.jpg");
+}
+.kuchniapagebg{
+    background-image: url("../media/img/pagetemps/kuchnia.jpg");
+}
+.kartypagebg{
+    background-image: url("../media/img/pagetemps/cards.jpg");
+}
+.musicpagebg{
+    background-image: url("../media/img/pagetemps/music.jpg");
+}
+.egzaminbg{
+    background-image: url("../media/img/pagetemps/egzaminbg.jpg");
+}
+.maturabg{
+    background-image: url("../media/img/pagetemps/maturabg.png");
 }
 
-@media(min-width: 1201px){
-    body{
-        background-image: url(../media/img/background/sfskyline.jpg);
-    }
-    ul{
-        list-style-type: none;
-        padding: 0px;
-    }
-    li{
-        padding:8px;
-        font-size: 16px;
-        border-bottom: 1px solid rgb(53, 53, 53);
-        font-family: "Courier New";
-        text-align: right;
-        transition: background-color 0.6s, letter-spacing 0.4s;
-    }
-    li:hover{
-        background-color: rgba(0, 153, 0, 0.521);
-        letter-spacing: 3px;
-    }
-
-    #pagecontent{
-        float: right;
-        width: 80%;
-    }
-    #pageheader{
-        font: 50px Verdana sans-serif;
-        color: rgb(221, 188, 0);
-        text-shadow: 2px 2px 8px red;
-        width:80%;
-        float:right;
-        text-align: center;
-        margin: 15px;
-    }
-    #aktkafelek{
-        width:28.32%;
-        min-height: 250px;
-        margin:1.7012%;
-        padding:0.5%;
-        float: left;
-        background-color: rgb(55, 13, 94);
-        border: 3px groove black;
-        font: 25px Verdana sans-serif;
-        color: white;
-        transition: background-color 0.6s;
-    }
-    #aktkafelek:hover{
-        background-color: brown;
-    }
-    #grykafelek{
-        width:28.32%;
-        min-height: 250px;
-        margin:1.7012%;
-        padding:0.5%;
-        float: left;
-        background-size: 100% 100%;
-        opacity: 0.8;
-        border: 3px groove black;
-        font: 25px Verdana sans-serif;
-        color: white;
-        transition: opacity 0.6s;
-    }
-    #grykafelek:hover{
-        opacity: 1;
-    }
-    #menu{
-        float: left;
-        width: 20%;
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        background-image: url("../media/img/background/menubackground.jpg");
-        overflow: hidden;
-        height: 100%;
-        border-right: 3px solid black;
-        font-weight: bold;
-    }
-    #urslogosmaller{
-        width: 0px;
-    }
-    #urslogo{
-        width: 100%;
-        position: relative;
-        top: 0px;
-        left: 0px;
-    }
-
-
-
-
-    .chooseplayer{
-        width: 17.5%;
-        margin: 1%;
-        float: right;
-        height: 80vh;
-        position: relative;
-        top: 10%;
-    }
-    .dkurek{
-        background-image: url(../media/img/players/error.png);
-        background-size: 100% 100%;
-        opacity: 0;
-        transition: opacity 2s;
-    }
-    .dkurek:hover{
-        opacity: 1;
-    }
-    .grzbog{
-        background-image: url(../media/img/players/error.png);
-        background-size: 100% 100%;
-        opacity: 0;
-        transition: opacity 2s;
-    }
-    .grzbog:hover{
-        opacity: 1;
-    }
-    .frytka{
-        background-image: url(../media/img/players/error.png);
-        background-size: 100% 100%;
-        opacity: 0;
-        transition: opacity 2s;
-    }
-    .frytka:hover{
-        opacity: 1;
-    }
-    .miko{
-        background-image: url(../media/img/players/error.png);
-        background-size: 100% 100%;
-        opacity: 0;
-        transition: opacity 2s;
-    }
-    .miko:hover{
-        opacity: 1;
-    }
-    .aber{
-        background-image: url(../media/img/players/error.png);
-        background-size: 100% 100%;
-        opacity: 0;
-        transition: opacity 2s;
-    }
-    .aber:hover{
-        opacity: 1;
-    }
-    .playername{
-        position:relative;
-        top: 50%;
-        font-size: 25px;
-        color: white;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        font-family: 'Courier New', Courier, monospace;
-        text-align: center; 
-    }
-
-    .gamename{
-        text-align: center;
-        position: relative;
-        top: 50%;
-        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-    }
-    .pudzianbackground{
-        background-image: url("../media/img/gametemps/pudzian.png");
-    }
-    .wisielecbackground{
-        background-image: url("../media/img/gametemps/wisielec.png");
-    }
-    .pusiaclickerbackground{
-        background-image: url("../media/img/gametemps/pusiaclicker.png");
-    }
-    .ojpbackground{
-        background-image: url("../media/img/gametemps/ojp.png")
-    }
-    .parispagebg{
-        background-image: url("../media/img/pagetemps/paryz.jpg");
-    }
-    .wroclawpagebg{
-        background-image: url("../media/img/pagetemps/wroclaw.jpg");
-    }
-    .alicepagebg{
-        background-image: url("../media/img/pagetemps/alice.jpg");
-    }
-    .kuchniapagebg{
-        background-image: url("../media/img/pagetemps/kuchnia.jpg");
-    }
-    .kartypagebg{
-        background-image: url("../media/img/pagetemps/cards.jpg");
-    }
-    .musicpagebg{
-        background-image: url("../media/img/pagetemps/music.jpg");
-    }
-    .egzaminbg{
-        background-image: url("../media/img/pagetemps/egzaminbg.jpg");
-    }
-    .maturabg{
-        background-image: url("../media/img/pagetemps/maturabg.png");
-    }
-}
 
