@@ -1,0 +1,69 @@
+#gracz, #dealer{
+    float: left;
+    background-color: #35654d;
+    border: 5px solid black;
+    padding:20px;
+    margin: 50px;
+    width:300px;
+    height:300px;
+}
+.napis{
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+}
+.suma{
+    float:right;
+    color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+    width: 30%;
+}
+#przyciski{
+    float:left;
+}
+#graczkarty, #dealerkarty{
+    color: rgb(255, 245, 158);
+    margin:15px;
+    padding:10px;
+    position: relative;
+    top: 10px;
+    font-size: 16px;
+    line-height: 30px;
+}
+#dealerkarty{
+    margin-top:0;
+    padding-top:0;
+    
+}
+#dealerpierwszakarta{
+    user-select: none;
+    color: black;
+    background-color: black;
+    margin:15px;
+    padding:10px;
+    position: relative;
+    top: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width:40%;
+}
+.splashscreen{
+    border: 7px groove rgb(109, 0, 0);
+    background-color: #234233;
+    position: absolute;
+    color: rgb(209, 0, 0);
+    text-shadow: 2px 2px 0px #000000;
+    padding: 20px;
+    text-align: center;
+    left: 343px;
+    top: 160px;
+    z-index: 10;
+    display: none;
+}
+
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="panel">
+        <input type="range" min="1" max="8" id="shoesizeinput" value="3" oninput="amount.value=shoesizeinput.value + ' talia(e)(ii)'">
+        <output name="amount" id="amount" for="shoesizeinput">3 talie</output>
+        <button class="playingbutton" onclick="createshoe(document.getElementById('shoesizeinput').value)">zmien rozmiar talii (resetuj gre)</button>
+    </div>
+
+    <div id="gracz">
+        <span class="napis">Twoje karty:</span>
+
+        <span class="suma" id="graczsuma">suma:</span>
+        <div id="graczkarty">
+
+        </div>
+    </div>
+
+    <div id="dealer">
+        <span class="napis">Karty dealera:</span>
+
+        <span class="suma" id="dealersuma">suma:</span>
+        <div id="dealerpierwszakarta"></div>
+        <div id="dealerkarty">
+            
+        </div>
+    </div>
+
+    <div id="przyciski">
+        <button class="playingbutton" onclick="dobierz()">dobierz</button>
+        <button class="playingbutton" onclick="stoj()">stoj</button>
+    </div>
+
+    <div id="przegrales" class="splashscreen">
+        <h1>przegrales!!!</h1><br><br>
+        <button onclick="newgame()">nastepne rozdanie</button>
+    </div>
+
+    <div id="remis" class="splashscreen">
+        <h1>remis!!!</h1><br><br>
+        <button onclick="newgame()">nastepne rozdanie</button>
+    </div>
+
+    <div id="wygrales" class="splashscreen">
+        <h1>wygrales!!!</h1><br><br>
+        <button onclick="newgame()">nastepne rozdanie</button>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    
+</body>
+</html>
