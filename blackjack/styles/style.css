@@ -7,6 +7,15 @@
     width:300px;
     height:300px;
 }
+body{
+    background-image: url("../img/carpet.png");
+    z-index:-10;
+    background-size:40%;
+}
+#amount{
+    text-shadow: 1px 1px 1px white;
+    color: whitesmoke;
+}
 .napis{
     color:white;
     font-weight: bold;
@@ -23,7 +32,7 @@
 #przyciski{
     float:left;
 }
-#graczkarty, #dealerkarty{
+#graczkarty, #graczkarty2, #dealerkarty{
     color: rgb(255, 245, 158);
     margin:15px;
     padding:10px;
@@ -31,6 +40,11 @@
     top: 10px;
     font-size: 16px;
     line-height: 30px;
+    height:71%;
+}
+#graczkarty, #graczkarty2{
+    width:33%;
+    float:left;
 }
 #dealerkarty{
     margin-top:0;
@@ -63,6 +77,24 @@
     top: 160px;
     z-index: 10;
     display: none;
+}
+#wygrales{
+    color: rgb(219, 179, 0);
+    text-shadow: 2px 2px 0px #ffffff;
+    border: 7px groove rgb(148, 113, 0);
+}
+#remis{
+    color: rgb(110, 110, 110);
+    text-shadow: 2px 2px 0px #000000;
+    border: 7px groove rgb(255, 255, 255);
+}
+#tasowanie{
+    color: rgb(252, 252, 252);
+    text-shadow: 2px 2px 0px #000000;
+    border: 7px groove rgb(37, 116, 0);
+}
+#gracz, #dealer{
+    background-image: url("../img/table.jpg");
 }
 
 

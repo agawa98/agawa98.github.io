@@ -20,6 +20,9 @@
         <div id="graczkarty">
 
         </div>
+        <div id="graczkarty2">
+            
+        </div>
     </div>
 
     <div id="dealer">
@@ -33,8 +36,9 @@
     </div>
 
     <div id="przyciski">
-        <button class="playingbutton" onclick="dobierz()">dobierz</button>
+        <button class="playingbutton" onclick="dobierz();splitcheck()">dobierz</button>
         <button class="playingbutton" onclick="stoj()">stoj</button>
+        <button id="splitbtn" onclick="split()" disabled>split</button>
     </div>
 
     <div id="przegrales" class="splashscreen">
@@ -50,6 +54,10 @@
     <div id="wygrales" class="splashscreen">
         <h1>wygrales!!!</h1><br><br>
         <button onclick="newgame()">nastepne rozdanie</button>
+    </div>
+
+    <div id="tasowanie" class="splashscreen">
+        <h1>tasowanie...</h1>
     </div>
 
     <script src="scripts/main.js"></script>

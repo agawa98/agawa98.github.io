@@ -1,5 +1,7 @@
 kolory = ["wino","trefl","dzwonek","serce"];
 figury = ["2","3","4","5","6","7","8","9","10","jopek","dama","krol","as"];
+usedcards = []
+kolorywgrze = [0,1,2,3]
 shoesizecount=0;
 kolorcount=0;
 figuracount=0;
@@ -9,6 +11,11 @@ suma=0;
 sumagracz=0;
 sumadealer=0;
 outcome=null;
+dealersturn=null;
+splitable=false;
+cardsingame=null
+shoesize=0
+
 
 
 function createshoe(shoesize){
@@ -32,37 +39,64 @@ function createshoe(shoesize){
         shoesizecount++;
     }
     shoesizecount=0;
+    cardsingame=52*shoesize
+    kolorywgrze = [0,1,2,3]
     resettable()
+    rozdaj()
 }
 
 function randomCard(){
-    randkolor = Math.floor(Math.random() * 4);
+    
+    randkolor = kolorywgrze[Math.floor(Math.random() * kolorywgrze.length)];
+    if(shoe[randkolor].length==0){
+        kolorywgrze.splice(randkolor,1)
+        randomCard()
+    }
     randfig = Math.floor(Math.random() * shoe[randkolor].length);
     kartafig = shoe[randkolor][randfig];
     console.log(shoe[randkolor][randfig] + " " + kolory[randkolor]);
     karta = shoe[randkolor][randfig] + " " + kolory[randkolor];
     shoe[randkolor].splice(randfig,1);
+    usedcards.push(kartafig);
+    cardsingame--;
 }
+
+function tasowanie(){
+    togglebuttons()
+    createshoe(shoesize)
+    document.getElementById("tasowanie").style.display = "none";
+}
+
 
 function sumowanie(){
     suma=0;
     if(kartafig == "10" || kartafig == "jopek" || kartafig == "dama" || kartafig == "krol"){
         suma+=10;
     }
-    if(kartafig == "as"){
-        if(suma>11){
+    if(kartafig == "as" && dealersturn==false){
+        if(sumagracz+suma>11){
             suma++;
         }
-        if(suma<=10){
+        if(suma+sumagracz<=10){
             suma+=11;
         }
     }
+    if(kartafig == "as" && dealersturn==true){
+        if(sumadealer+suma>11){
+            suma++;
+        }
+        if(suma+sumadealer<=10){
+            suma+=11;
+        }
+    }
+
     if(parseInt(kartafig)>=2 && parseInt(kartafig)<=9){
         suma = suma+parseInt(kartafig);
     }
 }
 
 function dobierz(){
+    
     randomCard();
     sumowanie();
     sumagracz += suma;
@@ -71,7 +105,7 @@ function dobierz(){
     if(sumagracz>21){
         togglebuttons()
         dealer1karta()
-        document.getElementById("dealerpierwszakarta").style.backgroundColor = "#35654d";
+        document.getElementById("dealerpierwszakarta").style.backgroundColor = "rgba(0,0,0,0)";
         document.getElementById("dealerpierwszakarta").style.color = "rgb(255, 245, 158)";
         sumadealer += zakrytakartawartosc;
         document.getElementById("dealersuma").innerHTML = "suma: " + sumadealer;
@@ -81,7 +115,7 @@ function dobierz(){
 
 function stoj(){
     togglebuttons()
-    document.getElementById("dealerpierwszakarta").style.backgroundColor = "#35654d";
+    document.getElementById("dealerpierwszakarta").style.backgroundColor = "rgba(0,0,0,0)";
     document.getElementById("dealerpierwszakarta").style.color = "rgb(255, 245, 158)";
     sumadealer += zakrytakartawartosc;
     document.getElementById("dealersuma").innerHTML = "suma: " + sumadealer;
@@ -106,6 +140,17 @@ function stoj(){
     }
 }
 
+function split(){
+    alert("split")
+    document.getElementById("splitbtn").disabled = true;
+    document.getElementById("graczkarty").innerText = document.getElementById("graczkarty").innerText.replace(karta,"")
+    document.getElementById("graczkarty2").innerText = karta;
+    reka="graczkarty";
+    document.getElementById(reka).style.backgroundColor = "#35654d";
+    document.getElementById(reka).style.filter = "saturate(150%)";
+    document.getElementById(reka).style.border = "1px solid rgba(255, 247, 0, 0.54)"
+}
+
 function resettable(){
     document.getElementById("graczsuma").innerHTML = "suma: "
     document.getElementById("graczkarty").innerHTML = "";
@@ -119,11 +164,13 @@ function resettable(){
 }
 
 function dealerdobierz(){
+    dealersturn=true
     randomCard();
     sumowanie();
     sumadealer += suma;
     document.getElementById("dealersuma").innerHTML = "suma: " + sumadealer;
     document.getElementById("dealerkarty").innerHTML += karta + "<br>";
+    dealersturn=false;
 }
 
 function dealer1karta(){
@@ -135,12 +182,13 @@ function dealer1karta(){
 
 function rozdaj(){
     
-    createshoe();
+    
     resettable();
-    dobierz();
-    dobierz();
     dealer1karta();
     dealerdobierz();
+    dobierz();
+    dobierz();
+    splitcheck();
     
 
     if(sumagracz==21){
@@ -185,9 +233,26 @@ function newgame(){
     togglebuttons();
     rozdaj();
     document.getElementById(outcome).style.display = "none";
+    if(cardsingame<10){
+        togglebuttons()
+        document.getElementById("tasowanie").style.display = "block";
+        setTimeout(tasowanie,2000);
+        return
+    }
+}
+
+function splitcheck(){
+    if(usedcards[usedcards.length-2]==usedcards[usedcards.length-1]){
+        document.getElementById("splitbtn").disabled = false;
+        splitable=true;
+    }
 }
 
 
 
 
-rozdaj();
+
+
+
+createshoe();
+
