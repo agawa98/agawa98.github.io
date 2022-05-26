@@ -1,5 +1,6 @@
 var szerokosc = window.innerWidth;
 var wysokosc = window.innerHeight;
+punkty=0
 
 Crafty.init(document.getElementById("gamediv"));
 
@@ -79,8 +80,6 @@ function spawnBullet(){
     yspawn=0
     randomXVel = (Math.floor(Math.random()*400+300))*(Math.round(Math.random()) * 2 - 1);
     randomYVel = (Math.floor(Math.random()*400+300))*(Math.round(Math.random()) * 2 - 1);
-    console.log(randomXVel)
-    console.log(randomYVel)
     if(randomXVel>0 && randomYVel>0){
         SpawnStations = ["W","SW","S"];
     }
@@ -131,9 +130,30 @@ function spawnBullet(){
     .checkHits("kapusta")
     .bind("HitOn",function(){
         alert("przegrales")
+        punkty=0
+        robak.destroy()
+        diff=300
+        Crafty("robak").each(function(){
+            this.destroy()
+        })
     })
     robak.vx = randomXVel
     robak.vy = randomYVel
+}
+
+function spawner(){
+    spawnBullet()
+    if(diff>30){
+        diff--
+    }
+    setTimeout(spawner,diff)
+}
+
+function pointCounter(){
+    punkty++
+    document.getElementById("punkty").innerHTML = "punkty: "+punkty
+    console.log("sadasd")
+    setTimeout(pointCounter,1000)
 }
 
 Crafty.scene("main", function(){
@@ -143,7 +163,10 @@ Crafty.scene("main", function(){
     .fourway(250)
     .collision()
 
-    setInterval(spawnBullet,200);
+    diff=300
+    
+    spawner()
+    pointCounter()
 });
 
 Crafty.enterScene("main");

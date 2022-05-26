@@ -2,3 +2,11 @@
     margin:0;
     padding:0;
 }
+#punkty{
+    z-index: 50;
+    position: absolute;
+    top:0;
+    left:0;
+    color: white;
+    font-size: 40px;
+}
