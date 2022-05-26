@@ -191,6 +191,12 @@ li:hover{
 .ojpbackground{
     background-image: url("../media/img/gametemps/ojp.png")
 }
+.robakibackground{
+    background-image: url("../media/img/gametemps/robakbackground.png");
+}
+.blackjackbackground{
+    background-image: url("../media/img/gametemps/blackjackbackground.png");
+}
 .parispagebg{
     background-image: url("../media/img/pagetemps/paryz.jpg");
 }
