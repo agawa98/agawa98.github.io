@@ -6,14 +6,13 @@ function loadscore(){
         return;
     }
     var cookies = document.cookie.split(";");
-    var cookint = 0 
     for(let i=1; i<5; i++){
 
         for(let j=0; j<cookies.length; j++){
-            if(cookies[j].split("=")[0]=="player"+i+"Name"){
+            if(cookies[j].split("=")[0].replace(/ /g, '') =="player"+i+"Name"){
                 document.getElementById("player"+i+"Name").value = cookies[j].split("=")[1]
             }
-            if(cookies[j].split("=")[0]=="player"+i+"Score"){
+            if(cookies[j].split("=")[0].replace(/ /g, '') =="player"+i+"Score"){
                 document.getElementById("player"+i+"Total").innerText = cookies[j].split("=")[1]
             }
         }
