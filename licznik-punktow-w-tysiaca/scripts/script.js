@@ -2,6 +2,9 @@ window.onbeforeunload = function () {return false;}
 
 
 function loadscore(){
+    if(document.cookie == ""){
+        return;
+    }
     var cookies = document.cookie.split(";");
     var cookint = 0 
     for(let i=1; i<5; i++){
