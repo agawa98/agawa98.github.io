@@ -1,5 +1,18 @@
 window.onbeforeunload = function () {return false;}
 
+
+function loadscore(){
+    var cookies = document.cookie.split(";");
+    var cookint = 0 
+    for(let i=1; i<5; i++){
+        console.log(cookint)
+        document.getElementById("player"+i+"Name").value = cookies[cookint].split("=")[1]
+        cookint++;
+        document.getElementById("player"+i+"Total").innerText = cookies[cookint].split("=")[1]
+        cookint++;
+    }
+}
+
 function newRound(){
 
     //jesli sa same zera, przerwij
@@ -29,8 +42,7 @@ function newRound(){
         //cookiebuilder
         document.cookie = "player"+i+"Name="+document.getElementById("player"+i+"Name").value+";expires=Tue, 19 Jan 2038 04:14:07 GMT"
 
-        document.cookie = "player"+i+"Score="+document.getElementById("player"+i+"Total").value+";expires=Tue, 19 Jan 2038 04:14:07 GMT"
+        document.cookie = "player"+i+"Score="+document.getElementById("player"+i+"Total").innerText+";expires=Tue, 19 Jan 2038 04:14:07 GMT"
     }
 
-    document.cookie = "player1name = "+document.getElementById(player1Name)+""
 }
