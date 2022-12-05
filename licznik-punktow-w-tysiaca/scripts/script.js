@@ -8,11 +8,15 @@ function loadscore(){
     var cookies = document.cookie.split(";");
     var cookint = 0 
     for(let i=1; i<5; i++){
-        console.log(cookint)
-        document.getElementById("player"+i+"Name").value = cookies[cookint].split("=")[1]
-        cookint++;
-        document.getElementById("player"+i+"Total").innerText = cookies[cookint].split("=")[1]
-        cookint++;
+
+        for(let j=0; j<cookies.length; j++){
+            if(cookies[j].split("=")[0]=="player"+i+"Name"){
+                document.getElementById("player"+i+"Name").value = cookies[j].split("=")[1]
+            }
+            if(cookies[j].split("=")[0]=="player"+i+"Score"){
+                document.getElementById("player"+i+"Total").innerText = cookies[j].split("=")[1]
+            }
+        }
     }
 }
 
