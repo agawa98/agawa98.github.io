@@ -17,9 +17,29 @@ a:hover, a{
 }
 
 div{
-    transition: 0.25s
+    transition: 1s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 #input{
     resize: none;
+}
+
+#warning{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color:white;
+    padding: 10px;
+}
+
+
+#goofer{
+    z-index: 1;
+}
+#goofyrange{
+    z-index:1;
+    position:fixed;
+    display:none;
 }
