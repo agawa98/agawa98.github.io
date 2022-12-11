@@ -1,0 +1,25 @@
+#nameDiv{
+    background-color: blueviolet;
+    text-align: center;
+}
+a:hover, a{
+    color:currentColor;
+    text-decoration: none;
+}
+
+
+.pageCard{
+    transition: all 0.2s;
+}
+.pageCard:hover{
+    transform: scale(1.04);
+    
+}
+
+div{
+    transition: 0.25s
+}
+
+#input{
+    resize: none;
+}

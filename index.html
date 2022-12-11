@@ -1,64 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/mainstyle.css" type="text/css">
-<link rel="icon" href="media/img/camel.png">
-
-<title>Ursynwood Sp.z.o.o.</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <title>lubie placki</title>
 </head>
 <body>
-
-    <div id="menu">
-        <a href="index.html"><img src="media/img/urslogo.png" id="urslogo"></a>
-        <ul>
-            <a href="gry.html"><li>Gry</li></a>
-            <a href="otherpages.html"><li>Moje inne strony</li></a>
-        </ul>
-        <script src="scripts/emojitransformer.js"></script>
-        <textarea id="input" value="" rows="5" placeholder="wpisz zdanie..."></textarea>
-    </div>
     
 
-<h2 id="pageheader">Aktualności</h2>
+    <div class="container mt-4 mb-5" id="top">
+        <div class="row">
+            <div id="nameDiv" class="col-sm-3">
+                <h1 id="name">agawa98</h1>
+            </div>
+        </div>
 
-<div id="pagecontent">
-    <div id="aktkafelek">
-        <h4>sprzedam opla</h4>
-        <p>opel robi wrrrr</p>
+        <div class="row">
+            <div id="intro" class="col-sm-6">
+                <button id="goofer" type="button" class="btn btn-sm btn-warning position-absolute top-0 end-0">goofy ahh mode</button>
+                <textarea id="input" value="" rows="5" placeholder="wpisz zdanie..."></textarea>
+            </div>            
+        </div>
     </div>
-    <div id="aktkafelek">
-        <h4>Artur Schrodingera</h4>
-        <p>raz jest a raz go nie ma</p>
-    </div>
-    <div id="aktkafelek">
-        <h4>Wciąż trwają poszukiwania legendarnego worku koksu</h4>
-        <p>wciąż trwają a końca nie widać, mikostopa dobrze ukrył</p>
-    </div>
-    <div id="aktkafelek">
-        <h4>Koronaświrus wciąż szaleje!!!</h4>
-        <p>Dużo osób już zmarło</p>
-    </div>
-    <div id="aktkafelek">
-        <h4>Dobrze jeeeeeeeeeeeeeest</h4>
-        <p>Jest Dobrze jak to mówią</p>
-    </div>
-    <div id="aktkafelek">
-        <h4>Siema siema</h4>
-        <p>at this time everyone can drink</p>
-    </div>
-    <div id="aktkafelek">
-        <h4><a href=https://www.youtube.com/watch?v=iKwTCcTTYiQ">Ty ku_wa FBI</a></h4>
-        <p>Co ci to ku_wa przeszkadza gówniarzu!!!</p>
-    </div>
-    <div id="aktkafelek">
-        <h4>Ale urwał!!!!!</h4>
-        <p>Ale to było dobre!!!!</p>
-    </div>
-</div>
 
+    <div class="container mt-4 mt-lg-5" id="strony">
+        <h3 class="mb-3">Moje strony</h3>
+        <div class="row g-2">
+            <div class="col-sm-3 col-6">
+                <a href="licznik-punktow-w-tysiaca/index.html">
+                    <div class="card pageCard">
+                        <img src="img/tysiac.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Licznik punktów w tysiącu  </h5>
+                            narzędzie do liczenia punktów
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-3 col-6">
+                <a href="smieszne-kotki/index.html">
+                    <div id="as" class="card pageCard">
+                        <img src="img/funnycat.jpg">
+                        <div  id="dd" class="card-body">
+                            <h5 class="card-title">Smieszne kotki</h5>
 
+                            Strona dla wielbicieli kotków
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-3 col-6">
+                <a href="https://lista-zakupow-cca0b.web.app/">
+                    <div class="card pageCard">
+                        <img src="img/listazakupow.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Lista zakupów</h5>
+
+                            mój projekt z vue
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4 mt-lg-5" id="gry">
+        <h3 class="mb-3">Moje gry<small class="text-muted">  - niestety w złym stanie, może kiedyś zremasteruję</small></h3>
+        <div class="row g-2">
+            <div class="col-sm-3 col-6">
+                <a href="gry/blackjack/index.html">
+                    <div class="card pageCard">
+                        <img src="img/blackjack.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Blackjack</h5>
+
+                            zrobiony na lekcjach
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-3 col-6">
+                <a href="gry/ojp/index.html">
+                    <div class="card pageCard">
+                        <img src="img/jakub.png">
+                        <div class="card-body">
+                            <h5 class="card-title">Odsiecz Jakuba Puchatka</h5>
+
+                            Projekt na programowanie w technikum
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-3 col-6">
+                <a href="gry/robaki/index.html">
+                    <div class="card pageCard">
+                        <img src="img/robak.png">
+                        <div class="card-body">
+                            <h5 class="card-title">Robak defender</h5>
+
+                            zrobiony na lekcji
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/emojitransformer.js"></script>
 </body>
 </html>
