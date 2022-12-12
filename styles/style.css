@@ -1,10 +1,35 @@
 #nameDiv{
-    background-color: blueviolet;
+    text-shadow: 3px 3px 0px rgb(255, 3, 3),-3px -3px 0px rgb(214, 252, 0);
+    color:orange;
     text-align: center;
 }
 a:hover, a{
     color:currentColor;
     text-decoration: none;
+}
+
+body{
+    background: radial-gradient(circle, rgba(56,207,51,0.5018382352941176) 0%, rgba(48,226,255,0.5018382352941176) 50%, rgba(254,255,65,0.5018382352941176) 100%);
+    background-size: 300% 300%;
+    animation: gradient 20s ease infinite;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    25%{
+        background-position: 50% 100%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    75%{
+        background-position: 50% 0%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+
 }
 
 
