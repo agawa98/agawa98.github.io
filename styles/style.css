@@ -1,8 +1,12 @@
-#nameDiv{
-    text-shadow: 3px 3px 0px rgb(255, 3, 3),-3px -3px 0px rgb(214, 252, 0);
-    color:orange;
-    text-align: center;
-}
+/*
+(alfabetycznie)
+1.tagi
+2.id
+3.klasy
+4.media
+*/
+
+
 a:hover, a{
     color:currentColor;
     text-decoration: none;
@@ -31,25 +35,37 @@ body{
     }
 
 }
-
-
-.pageCard{
-    transition: all 0.2s;
-}
-.pageCard:hover{
-    transform: scale(1.04);
-    
-}
-
 div{
     transition: 1s;
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-#input{
-    resize: none;
-}
 
+
+
+
+#goofer{
+    z-index: 1;
+}
+#goofyrange{
+    z-index:1;
+    position:fixed;
+    display:none;
+}
+#emojiinput{
+    resize: none;
+    width:100%;
+    border:none;
+    outline: none;
+}
+#name{
+    text-shadow: 3px 3px 0px rgb(255, 3, 3),-3px -3px 0px rgb(214, 252, 0);
+    color:orange;
+    text-align: center;
+}
+#nameDiv{
+    color:rgb(234, 0, 255);
+}
 #warning{
     position:fixed;
     bottom: 0;
@@ -60,11 +76,26 @@ div{
 }
 
 
-#goofer{
-    z-index: 1;
+
+
+
+.nobreak{
+    white-space: nowrap;
 }
-#goofyrange{
-    z-index:1;
-    position:fixed;
-    display:none;
+.pageCard{
+    transition: all 0.2s;
+}
+.pageCard:hover{
+    transform: scale(1.04);
+    
+}
+
+
+
+
+
+@media(max-width:992px){
+    #nameDiv{
+        text-shadow: 2px 2px 0px rgb(255, 3, 3),-2px -2px 0px rgb(214, 252, 0);
+    }
 }

@@ -1,5 +1,3 @@
-window.onbeforeunload = function () {return false;}
-
 
 //dostosowywanie szerokosci tabelki z wynikami
 

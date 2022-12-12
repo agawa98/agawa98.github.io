@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function transform(){         
         randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
-        txt = document.getElementById("input").value
+        txt = document.getElementById("emojiinput").value
 
         if(txt[txt.length-1]==" "){
             txt = txt.slice(0,-1)
@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
             txt=txt.replace(" ", emojis[Math.floor(Math.random() * emojis.length)])
         }
 
-        document.getElementById("input").value = txt
+        document.getElementById("emojiinput").value = txt
     }
 
-    document.getElementById("input").addEventListener("input",transform)
+    document.getElementById("emojiinput").addEventListener("input",transform)
       
 
     });
