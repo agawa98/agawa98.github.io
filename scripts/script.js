@@ -76,10 +76,3 @@ document.getElementById("goofer").addEventListener("click", ()=>{
 
 
 
-//warning
-
-document.getElementById("warning").addEventListener("click", ()=>{
-    document.getElementById("warning").remove()
-})
-
-
