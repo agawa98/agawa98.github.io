@@ -189,11 +189,16 @@ document.getElementById("catCompBreedSelect").addEventListener("change",showInfo
 
 async function generateCat(){
     var tag = document.getElementById("catGenTagSelect").value
-    var tekst = document.getElementById("catGenTxtInput").value
+    var tekst = "/says/" + document.getElementById("catGenTxtInput").value
+
+    //jesli input jest pusty, to usun parametr z fetcha
+    if(tekst=="/says/"){
+        tekst=""
+    }
 
     document.getElementById("catGenLoading").style.display = "block"
 
-    fetch("https://cataas.com/cat/"+tag+"/says/"+tekst)
+    fetch("https://cataas.com/cat/"+tag+tekst)
     .then(res=>{
         document.getElementById("catGenLoading").style.display = "none"
         document.getElementById("catGenImg").src = String(res.url)
@@ -236,7 +241,7 @@ document.getElementById("catGenButton").addEventListener("click", async()=>{
 })
 
 
-//  CAT GALLERY
+//  CAT GALLERY - todo
 
 // if(odleglosc miedzy dolem kompenidum i generatorem jest wieksza niz dajmy 300px oraz user jest na monitorze wikersztm niz 1000 px to wyswietl galerie)
 
@@ -270,6 +275,14 @@ function resize(staly, zmienny, minwidth, marginspace){
 
 
 
+//  CREDITS
+
+document.getElementById("creditsWrapper").addEventListener("mouseover",()=>{
+    document.getElementById("creditsWrapper").classList.remove("noTransition")
+})
+
+
+
 
 
 window.addEventListener("resize",()=>{
@@ -279,8 +292,9 @@ window.addEventListener("resize",()=>{
     
 })
 
-window.addEventListener("load",()=>{
-
+window.addEventListener("load",()=>{    
+    
+    
     resize(document.getElementById("catGenTxt2"),document.getElementById("catGenTxtInput"))
 
     resize(document.getElementById("catBreedLabel"), document.getElementById("catCompBreedSelect"), 60, 0)
