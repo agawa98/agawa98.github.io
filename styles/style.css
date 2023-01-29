@@ -46,6 +46,11 @@ div{
 
 #goofer{
     z-index: 1;
+    opacity: 0;
+    transition: .5s;
+}
+#goofer:hover{
+    opacity: 1;
 }
 #goofyrange{
     z-index:1;
